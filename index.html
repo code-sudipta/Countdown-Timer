@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Countdown Timer</h2>
+            <h4>Please select a time duration to start the timer.</h4>
+        </div>
+        <div class="times">
+            <div class="sample-times" onclick="setTime(5)">5 sec</div>
+            <div class="sample-times" onclick="setTime(10)">10 sec</div>
+            <div class="sample-times" onclick="setTime(30)">30 sec</div>
+            <div class="sample-times" onclick="setTime(60)">1 min</div>
+            <div class="sample-times" onclick="setTime(60*5)">5 min</div>
+            <div class="sample-times" onclick="setTime(60*10)">10 min</div>
+            <div class="sample-times" onclick="setTime(60*15)">15 min</div>
+            <div class="sample-times" onclick="setTime(60*30)">30 min</div>
+            <div class="sample-times" onclick="setTime(60*60)">1 hour</div>
+            <div class="sample-times" id="custom-btn"  onclick="setTime(0)">Custom</div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-container" id="modal-box">
+            <div class="modal-header">
+                <b style="font-size: larger;">Set Time</b>
+                <i class="fa-solid fa-xmark" id="close" style="font-size: larger;"></i>
+            </div>
+            <div class="modal-body">
+                <div class="hrs">
+                    <input type="number" value="00" id="hours">
+                    <a>Hours</a>
+                </div>
+                <div class="min">
+                    <input type="number"  value="00" id="minutes">
+                    <a>Minutes</a>
+                </div>
+                <div class="sec">
+                    <input type="number"  value="00" id="seconds">
+                    <a>Seconds</a>
+                </div>
+            </div>
+            <button id="start"><b>Start</b></button>
+        </div>
+
+        <div class="modal-container2" id="modal-box2">
+            <h2 style="margin:0px">Timer is started</h2>
+            <a>Countdown Begins</a>
+            <button id="stop"><b>Stop</b></button>
+        </div>
+    </div>
+
+    <div class="screen" id="screen">
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
